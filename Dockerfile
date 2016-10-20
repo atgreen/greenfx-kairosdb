@@ -13,7 +13,8 @@ EXPOSE 8080
 
 EXPOSE 4242
 
-USER kairosdb
+#USER kairosdb
+USER root
 
 CMD /opt/kairosdb/bin/kairosdb.sh run
 
