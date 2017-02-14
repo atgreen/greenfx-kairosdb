@@ -10,10 +10,9 @@ RUN rpm -ivh http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-9.no
 RUN useradd kairosdb && for d in /opt/kairosdb /tmp/*; do chown -R kairosdb:kairosdb $d; done
 
 EXPOSE 8080
-
 EXPOSE 4242
 
-USER root
+USER kairosdb
 
 CMD /opt/kairosdb/bin/kairosdb.sh run
 
