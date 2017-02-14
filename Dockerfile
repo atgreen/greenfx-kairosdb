@@ -12,9 +12,6 @@ RUN useradd kairosdb && for d in /opt/kairosdb /tmp/*; do chown -R kairosdb:kair
 
 EXPOSE 8080 4242
 
-#USER kairosdb
-USER root
-
 CMD /opt/kairosdb/bin/kairosdb.sh run
 
 
